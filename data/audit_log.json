@@ -1,0 +1,221 @@
+[
+  {
+    "timestamp": "2026-07-01T04:37:00+00:00",
+    "event": "submission",
+    "content_id": "pg_bd09e8f15f2e",
+    "creator_id": "test",
+    "content_type": "text",
+    "verdict": "likely_ai",
+    "confidence": 93,
+    "p_ai": 0.926,
+    "signals": {
+      "llm": null,
+      "stylometric": 0.877,
+      "lexical": 1.0
+    },
+    "signal_detail": {
+      "llm": {
+        "note": "GROQ_API_KEY not set — LLM signal skipped, using heuristics"
+      },
+      "stylometric": {
+        "sentence_count": 1,
+        "mean_sentence_len": 13,
+        "burstiness_cv": 0.0,
+        "type_token_ratio": 1.0,
+        "informal_markers": 0,
+        "components": {
+          "burstiness_ai": 1.0,
+          "ttr_ai": 0.387,
+          "regularity_ai": 1.0
+        }
+      },
+      "lexical": {
+        "ai_tell_hits": 6,
+        "ai_tell_per_100w": 46.15,
+        "contractions_per_100w": 0.0,
+        "components": {
+          "tell_ai": 1.0,
+          "contraction_ai": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-01T04:46:28+00:00",
+    "event": "submission",
+    "content_id": "pg_41fb941ec5dc",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "verdict": "likely_ai",
+    "confidence": 81,
+    "p_ai": 0.811,
+    "signals": {
+      "llm": 0.8,
+      "stylometric": 0.705,
+      "lexical": 1.0
+    },
+    "signal_detail": {
+      "llm": {
+        "model": "llama-3.3-70b-versatile",
+        "reason": "Generic phrasing"
+      },
+      "stylometric": {
+        "sentence_count": 3,
+        "mean_sentence_len": 14.33,
+        "burstiness_cv": 0.379,
+        "type_token_ratio": 0.884,
+        "informal_markers": 0,
+        "components": {
+          "burstiness_ai": 0.618,
+          "ttr_ai": 0.575,
+          "regularity_ai": 1.0
+        }
+      },
+      "lexical": {
+        "ai_tell_hits": 4,
+        "ai_tell_per_100w": 9.3,
+        "contractions_per_100w": 0.0,
+        "components": {
+          "tell_ai": 1.0,
+          "contraction_ai": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-01T04:46:28+00:00",
+    "event": "submission",
+    "content_id": "pg_7fd4192e3f37",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "verdict": "likely_human",
+    "confidence": 83,
+    "p_ai": 0.174,
+    "signals": {
+      "llm": 0.2,
+      "stylometric": 0.161,
+      "lexical": 0.13
+    },
+    "signal_detail": {
+      "llm": {
+        "model": "llama-3.3-70b-versatile",
+        "reason": "informal tone"
+      },
+      "stylometric": {
+        "sentence_count": 4,
+        "mean_sentence_len": 11,
+        "burstiness_cv": 0.683,
+        "type_token_ratio": 0.932,
+        "informal_markers": 6,
+        "components": {
+          "burstiness_ai": 0.111,
+          "ttr_ai": 0.497,
+          "regularity_ai": 0.0
+        }
+      },
+      "lexical": {
+        "ai_tell_hits": 0,
+        "ai_tell_per_100w": 0.0,
+        "contractions_per_100w": 2.27,
+        "components": {
+          "tell_ai": 0.0,
+          "contraction_ai": 0.432
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-01T04:46:29+00:00",
+    "event": "submission",
+    "content_id": "pg_02a86dadd714",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "verdict": "uncertain",
+    "confidence": 69,
+    "p_ai": 0.657,
+    "signals": {
+      "llm": 0.7,
+      "stylometric": 0.825,
+      "lexical": 0.3
+    },
+    "signal_detail": {
+      "llm": {
+        "model": "llama-3.3-70b-versatile",
+        "reason": "formal tone"
+      },
+      "stylometric": {
+        "sentence_count": 2,
+        "mean_sentence_len": 21.5,
+        "burstiness_cv": 0.256,
+        "type_token_ratio": 0.86,
+        "informal_markers": 0,
+        "components": {
+          "burstiness_ai": 0.824,
+          "ttr_ai": 0.612,
+          "regularity_ai": 1.0
+        }
+      },
+      "lexical": {
+        "ai_tell_hits": 0,
+        "ai_tell_per_100w": 0.0,
+        "contractions_per_100w": 0.0,
+        "components": {
+          "tell_ai": 0.0,
+          "contraction_ai": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-01T04:46:29+00:00",
+    "event": "submission",
+    "content_id": "pg_8f84e222c837",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "verdict": "uncertain",
+    "confidence": 81,
+    "p_ai": 0.406,
+    "signals": {
+      "llm": 0.4,
+      "stylometric": 0.614,
+      "lexical": 0.108
+    },
+    "signal_detail": {
+      "llm": {
+        "model": "llama-3.3-70b-versatile",
+        "reason": "neutral tone"
+      },
+      "stylometric": {
+        "sentence_count": 3,
+        "mean_sentence_len": 13,
+        "burstiness_cv": 0.382,
+        "type_token_ratio": 0.897,
+        "informal_markers": 1,
+        "components": {
+          "burstiness_ai": 0.613,
+          "ttr_ai": 0.553,
+          "regularity_ai": 0.667
+        }
+      },
+      "lexical": {
+        "ai_tell_hits": 0,
+        "ai_tell_per_100w": 0.0,
+        "contractions_per_100w": 2.56,
+        "components": {
+          "tell_ai": 0.0,
+          "contraction_ai": 0.359
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-01T04:46:48+00:00",
+    "event": "appeal",
+    "content_id": "pg_41fb941ec5dc",
+    "creator_id": "readme_test",
+    "status": "under_review",
+    "appeal_reasoning": "I wrote this myself for a philosophy class; happy to share drafts.",
+    "original_verdict": "likely_ai",
+    "original_confidence": 81
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "pg_bd09e8f15f2e": {
+    "content_id": "pg_bd09e8f15f2e",
+    "creator_id": "test",
+    "content_type": "text",
+    "status": "classified",
+    "verdict": "likely_ai",
+    "p_ai": 0.926,
+    "confidence": 93,
+    "degraded": true,
+    "per_signal": {
+      "stylometric": 0.877,
+      "lexical": 1.0
+    },
+    "weights": {
+      "stylometric": 0.6,
+      "lexical": 0.4
+    },
+    "verified_creator": false,
+    "excerpt": "Furthermore, it is important to note that stakeholders must leverage robust holistic frameworks."
+  },
+  "pg_41fb941ec5dc": {
+    "content_id": "pg_41fb941ec5dc",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "status": "under_review",
+    "verdict": "likely_ai",
+    "p_ai": 0.811,
+    "confidence": 81,
+    "degraded": false,
+    "per_signal": {
+      "llm": 0.8,
+      "stylometric": 0.705,
+      "lexical": 1.0
+    },
+    "weights": {
+      "llm": 0.5,
+      "stylometric": 0.3,
+      "lexical": 0.2
+    },
+    "verified_creator": false,
+    "excerpt": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while",
+    "appeal_reasoning": "I wrote this myself for a philosophy class; happy to share drafts."
+  },
+  "pg_7fd4192e3f37": {
+    "content_id": "pg_7fd4192e3f37",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "status": "classified",
+    "verdict": "likely_human",
+    "p_ai": 0.174,
+    "confidence": 83,
+    "degraded": false,
+    "per_signal": {
+      "llm": 0.2,
+      "stylometric": 0.161,
+      "lexical": 0.13
+    },
+    "weights": {
+      "llm": 0.5,
+      "stylometric": 0.3,
+      "lexical": 0.2
+    },
+    "verified_creator": false,
+    "excerpt": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too"
+  },
+  "pg_02a86dadd714": {
+    "content_id": "pg_02a86dadd714",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "status": "classified",
+    "verdict": "uncertain",
+    "p_ai": 0.657,
+    "confidence": 69,
+    "degraded": false,
+    "per_signal": {
+      "llm": 0.7,
+      "stylometric": 0.825,
+      "lexical": 0.3
+    },
+    "weights": {
+      "llm": 0.5,
+      "stylometric": 0.3,
+      "lexical": 0.2
+    },
+    "verified_creator": false,
+    "excerpt": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Centr"
+  },
+  "pg_8f84e222c837": {
+    "content_id": "pg_8f84e222c837",
+    "creator_id": "readme_test",
+    "content_type": "text",
+    "status": "classified",
+    "verdict": "uncertain",
+    "p_ai": 0.406,
+    "confidence": 81,
+    "degraded": false,
+    "per_signal": {
+      "llm": 0.4,
+      "stylometric": 0.614,
+      "lexical": 0.108
+    },
+    "weights": {
+      "llm": 0.5,
+      "stylometric": 0.3,
+      "lexical": 0.2
+    },
+    "verified_creator": false,
+    "excerpt": "I've been thinking a lot about remote work lately. There are genuine tradeoffs - flexibility and no commute on one side,"
+  }
+}

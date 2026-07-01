@@ -54,20 +54,21 @@ than missing some AI*:
 | `≤ 0.40` | **Likely human** (easier bar to clear) |
 
 **Validation — the scores vary meaningfully and reach all three bands.** Measured on
-the spec's four calibration inputs with the two heuristic signals (set `GROQ_API_KEY` to
-add the LLM signal, which further sharpens the two Uncertain cases):
+the spec's four calibration inputs with all three signals active (Groq LLM +
+stylometric + lexical):
 
 | Input | `p_ai` | Verdict | Confidence |
 |---|---|---|---|
-| Clearly AI ("…transformative paradigm shift… stakeholders…") | **0.82** | Likely AI | 82% |
-| Clearly human ("ok so i finally tried that ramen place…") | **0.15** | Likely human | 85% |
-| Borderline — formal human (monetary-policy essay) | **0.61** | Uncertain | — |
+| Clearly AI ("…transformative paradigm shift… stakeholders…") | **0.81** | Likely AI | 81% |
+| Clearly human ("ok so i finally tried that ramen place…") | **0.17** | Likely human | 83% |
+| Borderline — formal human (monetary-policy essay) | **0.66** | Uncertain | — |
 | Borderline — lightly-edited AI (remote-work musing) | **0.41** | Uncertain | — |
 
 **Two submissions with noticeably different confidence** (required):
-a **high-confidence** case — the clearly-AI paragraph scored **`p_ai = 0.82` → "Likely
-AI", 82% confidence** — versus a **lower-confidence** case — the lightly-edited AI text
-scored **`p_ai = 0.41` → "Uncertain"**. Same system, a 0.41 spread in the score and two
+a **high-confidence** case — the clearly-AI paragraph scored **`p_ai = 0.81` → "Likely
+AI", 81% confidence** (per-signal: LLM 0.80, stylometric 0.71, lexical 1.0) — versus a
+**lower-confidence** case — the lightly-edited AI text scored **`p_ai = 0.41` →
+"Uncertain"**. Same system, a 0.40 spread in the score and two
 different labels: the score is meaningful, not a constant. The two borderline inputs
 correctly land in *Uncertain* rather than being falsely branded, which is the
 false-positive safeguard working as designed.
@@ -112,31 +113,32 @@ signal's score**. Real entries from a test run (submission + its appeal):
 ```json
 [
   {
-    "timestamp": "2026-07-01T00:52:33+00:00",
+    "timestamp": "2026-07-01T04:46:28+00:00",
     "event": "submission",
-    "content_id": "pg_4355a2477525",
-    "creator_id": "alice",
+    "content_id": "pg_41fb941ec5dc",
+    "creator_id": "readme_test",
     "content_type": "text",
     "verdict": "likely_ai",
-    "confidence": 82,
-    "p_ai": 0.823,
-    "signals": { "llm": null, "stylometric": 0.705, "lexical": 1.0 }
+    "confidence": 81,
+    "p_ai": 0.811,
+    "signals": { "llm": 0.8, "stylometric": 0.705, "lexical": 1.0 }
   },
   {
-    "timestamp": "2026-07-01T00:52:33+00:00",
+    "timestamp": "2026-07-01T04:46:35+00:00",
     "event": "appeal",
-    "content_id": "pg_4355a2477525",
-    "creator_id": "alice",
+    "content_id": "pg_41fb941ec5dc",
+    "creator_id": "readme_test",
     "status": "under_review",
     "appeal_reasoning": "I wrote this myself for a philosophy class; happy to share drafts.",
     "original_verdict": "likely_ai",
-    "original_confidence": 82
+    "original_confidence": 81
   }
 ]
 ```
 
-(`"llm": null` because this run had no API key — the two heuristic signals carried the
-verdict and the entry is flagged `degraded`. With `GROQ_API_KEY` set, `llm` holds a score.)
+(All three signals contributed to this decision — `llm` 0.80, `stylometric` 0.705,
+`lexical` 1.0. If `GROQ_API_KEY` is unset, `llm` is `null`, the two heuristics carry the
+verdict, and the entry is flagged `degraded`.)
 
 ## Appeals — handling
 
@@ -242,4 +244,4 @@ curl -s http://localhost:5000/log        # see the structured audit log
 ```
 
 > Runs **without** a key (heuristics only, results flagged `degraded`); add
-> `GROQ_API_KEY` to activate the semantic LLM signal.
+> `GRO
